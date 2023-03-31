@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { useState } from "react";
 export default function Article() {
-  const [state, setState] = useState(true);
+  const [state, setState] = useState(false);
  
   return (
     <>
@@ -51,7 +51,10 @@ export default function Article() {
                     Erdogan has also worked on allowing religious freedom in the
                     Muslim-majority country, which was previously ruled by an
                     oppressive and extremist secular regime.
-                  </p></>}
+                  </p>
+                  <h5 className="hide" onClick={()=> setState(!state)}
+                  style={{color:'#E25141',marginRight:'5px'}}>  Hide article </h5>
+</>}
             </div>
           </div>
         </div>

@@ -9,9 +9,17 @@ function BasicExample() {
     const [comments, setComments] = useState([]);
   
     const onClickHandle = () => {
-      setComments([...comments, { name: name, text: text }]);
-      setName("");
-      setText("");
+     
+      if (!name){
+        alert("Enter Name")
+      }else if (!text){
+        alert("enter comment")
+      }else{
+        setComments([...comments, { name: name, text: text }]);
+        setName("");
+        setText("");
+
+      }
     };
   
     const onSubmitHandle = (e) => {
